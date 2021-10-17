@@ -20,7 +20,7 @@ function showError(input, message) {
     //adding error to the form-control class
     formControl.className = 'form-control error'; //over write the form class to red
     const small = formControl.querySelector('small');
-    //change the error message to be the one in showError
+    //show the error message inside small tag
     small.innerText = message;
 }
 
