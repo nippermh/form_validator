@@ -1,5 +1,5 @@
 /*
-This code has been refactored
+This code has been refactored in another file
 */
 
 const form = document.getElementById('form');
