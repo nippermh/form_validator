@@ -1,10 +1,5 @@
 /*
-Goals:
-get the elements
-listen to see if the form has been submitted
-if values entered are not valid
-show error message and outline in red
-if values are correct hightlight in green
+This code has been refactored
 */
 
 const form = document.getElementById('form');
@@ -41,7 +36,7 @@ function isValidEmail(email) {
 form.addEventListener('submit', function(e) {
     e.preventDefault(); //prevents submitting 
     //console.log('username.value');
-
+    //this is all removed in the refactored code
     if(username.value === '') {
         showError(username, 'Username is required');
     } else {
