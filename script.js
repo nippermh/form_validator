@@ -1,12 +1,3 @@
-/*
-Goals:
-get the input elements
-listen to see if the form has been submitted
-if values entered are not valid
-show error message and outline in red
-if values are correct hightlight in green
-*/
-
 //get all the elements
 const form = document.getElementById('form');
 const username = document.getElementById('username');
