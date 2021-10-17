@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+/*root is the scope*/
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+  }
+  /*remove padding to it changing the width*/
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f9fafb;
+    font-family: 'Open Sans', sans-serif;
+    /*center with flex properties
+    All direct children of the body are flex
+    */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /*necessary for centering on the page*/
+    margin: 0;
+  }
+  /*wraps around everything*/
+  .container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+
+  }
+
+  @media screen and (max-width: 400px) {
+    .container {
+      width: 80%;
+      margin-top: 0;
+    
+    }
+    form {
+        padding: 10px;
+    }
+  }
+  
+  h2 {
+    text-align: center;
+    margin: 0 0 20px;
+  }
+  
+  .form {
+    padding: 30px 40px;
+  }
+  
+  .form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative; /*error message will have to be set absolute so form control around it must be relative*/
+  }
+  
+  .form-control label {
+    color: #777;
+    display: block; /*make them go on their own line*/
+    margin-bottom: 5px;
+  }
+  
+  .form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;  /*make them go on their own line*/
+    width: 100%; /*make them stretch all the way accross*/
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .form-control input:focus {
+    outline: 0; /*remove the outline*/
+    border-color: #777; /*implement at least a border color when you are inside it*/
+  }
+  
+  .form-control.success input {
+    border-color: var(--success-color); /*if valid data entered*/
+  }
+  
+  .form-control.error input {
+    border-color: var(--error-color); /*if there is an error*/
+  }
+  
+  .form-control small {
+    color: var(--error-color); /*this is where the error message is*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden; /*simply makes things hidden*/
+    /*display: none; will collapse anything around it*/
+  }
+  
+  .form-control.error small {
+    visibility: visible; /*if it has an error we have to set the error to visible in js*/
+  }
+  
+  .form button {
+    cursor: pointer;
+    background-color: #3498db;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+  }
